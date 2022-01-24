@@ -1,1 +1,0 @@
-Es broma, dadme días.
