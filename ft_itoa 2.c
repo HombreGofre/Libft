@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char  *str2(char *str, int n, int len)
+char  *str2(char *str,long int n, int len)
 {
       while (n > 0)
     {
@@ -41,9 +41,7 @@ char    *ft_itoa(int n)
 {
     char		*str;
     long int	len;
-    int			sign;
 
-    sign = 1;
     len = largo(n);
     str = (char *)malloc(sizeof(char) * len + 1);
     if (!str)
@@ -53,7 +51,6 @@ char    *ft_itoa(int n)
         str[0] = '0';
     if (n < 0)
     {
-        sign *= -1;
         n = n * -1;
         str[0] = '-';
     }
