@@ -41,11 +41,15 @@ char    *ft_itoa(int n)
 {
     char		*str;
     long int	len;
+<<<<<<< HEAD:ft_itoa.c
     int			sign;
 	long int	num;
 
 	num = n;
     sign = 1;
+=======
+
+>>>>>>> 3a605e81cf1e8e44789b6ab00f1cfbca3b8a09ca:ft_itoa 2.c
     len = largo(n);
     str = (char *)malloc(sizeof(char) * len + 1);
     if (!str)
@@ -55,8 +59,12 @@ char    *ft_itoa(int n)
         str[0] = '0';
     if (num < 0)
     {
+<<<<<<< HEAD:ft_itoa.c
         sign *= -1;
         num = num * -1;
+=======
+        n = n * -1;
+>>>>>>> 3a605e81cf1e8e44789b6ab00f1cfbca3b8a09ca:ft_itoa 2.c
         str[0] = '-';
     }
     str = str2(str, num, len);

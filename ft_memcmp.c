@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: spiderman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 17:06:15 by cnunez-s          #+#    #+#             */
 /*   Updated: 2022/02/04 17:13:33 by cnunez-s         ###   ########.fr       */
