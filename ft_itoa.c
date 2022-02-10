@@ -39,7 +39,7 @@ int largo(int    n) //realizamos un contador para saber la capacidad del char
 char    *ft_itoa(int n)
 {
     char    *str;
-    int        len;
+    long int        len;
     int     sign;
     
     sign = 1;
@@ -71,7 +71,7 @@ char    *ft_itoa(int n)
 int main ()
 {
     char    *str1;
-    str1 = ft_itoa(-65);
+    str1 = ft_itoa(2287145887);
     
     printf("%s", str1);
 }
