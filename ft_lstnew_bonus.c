@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 19:27:23 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/11 19:27:30 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/14 16:30:19 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ t_list  *ft_lstnew(void *content)
     if (!lst)
         return (NULL);
     lst -> content = content;
-    lst -> exit = NULL;
+    lst -> next = NULL;
     return (lst);
 }
