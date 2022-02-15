@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-//iterar "f" a "lst" para generar una nueva vaina
-//creaciÛn de una nueva lista de la sucesiÛn de la aplicaciÛn de "f"
-//se eliminan con "del" lo que haya en el nuevo elemento en caso de ser necesario 
-=======
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -14,13 +9,15 @@
 /*   Updated: 2022/02/14 15:40:02 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
->>>>>>> f81c68fbae40256d4649e68a1282de5522ca8d01
 
-//#include "libft.h"
+//iterar "f" a "lst" para generar una nueva vaina
+//creaci√≥n de una nueva lista de la sucesi√≥n de la aplicaci√≥n de "f"
+//se eliminan con "del" lo que haya en el nuevo elemento en caso de ser necesario 
+
+#include "libft.h"
 
 t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-<<<<<<< HEAD
 	t_list	*lst2;
 	t_list	*lment;
 	
@@ -36,8 +33,5 @@ t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&lst2, lment);
 		lst->next = lst;
 	}
-	return (new);
-=======
-
->>>>>>> f81c68fbae40256d4649e68a1282de5522ca8d01
+	return (lst2);
 }
