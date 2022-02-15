@@ -1,11 +1,26 @@
+<<<<<<< HEAD
 //iterar "f" a "lst" para generar una nueva vaina
 //creación de una nueva lista de la sucesión de la aplicación de "f"
 //se eliminan con "del" lo que haya en el nuevo elemento en caso de ser necesario 
+=======
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/14 15:36:49 by cnunez-s          #+#    #+#             */
+/*   Updated: 2022/02/14 15:40:02 by cnunez-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+>>>>>>> f81c68fbae40256d4649e68a1282de5522ca8d01
 
 //#include "libft.h"
 
 t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+<<<<<<< HEAD
 	t_list	*lst2;
 	t_list	*lment;
 	
@@ -22,4 +37,7 @@ t_list	ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		lst->next = lst;
 	}
 	return (new);
+=======
+
+>>>>>>> f81c68fbae40256d4649e68a1282de5522ca8d01
 }
