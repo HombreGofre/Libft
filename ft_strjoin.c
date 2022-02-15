@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 15:53:13 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/07 16:44:24 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/15 19:58:06 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (s2[i])
 	{
-		str[j] = s2[i];
-		i++;
-		j++;
+		str[j++] = s2[i++];
 	}
 	str[j] = '\0';
 	return (str);

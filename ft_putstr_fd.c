@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 15:04:52 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/10 15:58:43 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/15 20:12:18 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	}
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		write (fd, &s[i], 1);
 		i++;

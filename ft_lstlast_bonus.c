@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:36:08 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/14 19:10:15 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/15 20:17:39 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if(!lst)
+	if (!lst)
 		return (NULL);
-
 	if (lst->next != NULL)
 	{
 		return (ft_lstlast(lst->next));

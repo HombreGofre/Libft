@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:34:39 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/14 19:31:30 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/15 16:46:35 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (*lst)
 	{
-		fin = *lst;
-		while (fin->next)
-			fin = fin->next;
+		fin = ft_lstlast(*lst);
 		fin->next = new;
 	}
 	else
