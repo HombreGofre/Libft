@@ -2,7 +2,7 @@
 #inlcude "libft.h"
 
 //recorrremos el string para saber cuantas palabras tiene mi cadena
-int	contador(char	*str, int n)
+int	contador(char	*str, char c)
 {
 	int i;
 	int cont;
@@ -16,11 +16,9 @@ int	contador(char	*str, int n)
 				cont = 1;
 				i++;
 			}
-			else (*str == c)
+			else if(*str == c)
 				cont = 0;
 			str++;
 	}
 	return (i);
 }
-
-
