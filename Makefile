@@ -15,13 +15,13 @@ ${NAME}: ${OBJS}
 	${AR} ${NAME} ${OBJS}
 	ranlib ${NAME}
 
-${BONUS}: ${OBJS} ${OBJB}
-		${AR} ${NAME} ${OBJB} ${OBJS}
+${BONUS}:	${OBJB}
+		${AR} ${NAME} ${OBJB}
 		ranlib ${NAME}
 	
 bonus:	${BONUS}
 	
-all:	${NAME}
+all:	${NAME} ${BONUS}
 
 clean:	
 	${RM} ${OBJS} ${OBJB}
