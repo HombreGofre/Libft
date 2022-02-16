@@ -9,7 +9,7 @@ int	contador(char	*str, char c)
 	
 	i = 0;
 	cont = 0;
-	while (str)
+	while (*str)
 	{
 			if(*str != c && cont == 0)
 			{
