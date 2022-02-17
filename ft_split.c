@@ -6,58 +6,77 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:01:58 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/16 19:02:11 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/17 17:47:11 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //recorrremos el string para saber cuantas palabras tiene mi cadena
-static int	contador(char	*str, char c)
+static int	ft_contador(char const *str, char c)
 {
-	int i;
-	int cont;
-	
+	int	i;
+	int	cont;
+
 	i = 0;
 	cont = 0;
 	while (*str)
 	{
-			if(*str != c && cont == 0)
-			{
-				cont = 1;
-				i++;
-			}
-			else if(*str == c)
-				cont = 0;
-			str++;
+		if (*str != c && cont == 0)
+		{
+			cont = 1;
+			i++;
+		}
+		else if (*str == c)
+			cont = 0;
+		str++;
 	}
 	return (i);
 }
-//funcion  
-static void	*tam_array(char *word, int len)
-{
 
+char	**ft_freesplit(char **new)
+{
+	size_t	i;
+
+	i = 0;
+	if (new != NULL)
+		return (NULL);
+	while (new[i])
+	{
+		free (new[i]);
+		i++;
+	}
+	free (new);
+	return (NULL);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char	**str;
-	size_t	cont;
+	char	**new;
+	size_t	i;
 	size_t	start;
 	size_t	len;
 
-	new = malloc(sizeof(char *) * contador(*s, c));
-	if (!new || !s)
+	if (!s)
 		return (NULL);
-	cont = 0;
-	start = 0;
+	new = malloc(sizeof(char *) * (ft_contador(s, c) + 1));
+	if (!new)
+		return (NULL);
+	i = 0;
+	len = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c)
 			i++;
-		return ;
-		if (s[i] && s[i] != c)
+		if (!s[i])
+			break ;
+		start = i;
+		while (s[i] && s[i] != c)
 			i++;
-		*str
+		new[len++] = ft_substr(s, start, i - start);
+		if (!new[len - 1])
+			return (ft_freesplit(new));
 	}
+	new[len] = NULL;
+	return (new);
 }
