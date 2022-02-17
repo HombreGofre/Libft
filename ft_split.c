@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:01:58 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/17 17:47:11 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:01:00 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ char	**ft_freesplit(char **new)
 	return (NULL);
 }
 
+char	**init_split(char const *s, char c)
+{
+	if (!s)
+		return (NULL);
+	return (malloc(sizeof(char *) * (ft_contador(s, c) + 1)));
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
@@ -57,9 +64,7 @@ char	**ft_split(char const *s, char c)
 	size_t	start;
 	size_t	len;
 
-	if (!s)
-		return (NULL);
-	new = malloc(sizeof(char *) * (ft_contador(s, c) + 1));
+	new = init_split(s, c);
 	if (!new)
 		return (NULL);
 	i = 0;
