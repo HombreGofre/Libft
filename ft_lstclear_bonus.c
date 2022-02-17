@@ -6,7 +6,7 @@
 /*   By: cnunez-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:35:09 by cnunez-s          #+#    #+#             */
-/*   Updated: 2022/02/15 20:25:25 by cnunez-s         ###   ########.fr       */
+/*   Updated: 2022/02/17 20:12:14 by cnunez-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	t_list	*aux;
+
+	while (*lst)
+	{
+		aux = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = aux;
+	}
+	*lst = NULL;
+}
+/*{
 	t_list	*ax;
 
 	while (*lst)
@@ -23,4 +34,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = (*lst)->next;
 	}
 	*lst = NULL;
-}
+}*/
