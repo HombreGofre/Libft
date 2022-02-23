@@ -39,7 +39,7 @@ char	**ft_freesplit(char **new)
 	size_t	i;
 
 	i = 0;
-	if (new != NULL)
+	if (new == NULL)
 		return (NULL);
 	while (new[i])
 	{
